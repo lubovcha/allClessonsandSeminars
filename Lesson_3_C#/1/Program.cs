@@ -44,6 +44,7 @@ string result = String.Empty;
 while (i < count)
 {
     result = result + text;
+    i++;
 }
 return result;
 }
