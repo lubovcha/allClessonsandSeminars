@@ -1,28 +1,13 @@
-﻿int[] GetArray()
+﻿int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1};
+
+void PrintArray(int [] array) 
 {
-int[] result = new int[8];
-for (int i = 0; i < result.Length; i++)
-{
-result[i] = new Random().Next(100);
+    int count = 3;
+    for (int i = 0; i < count; i++) 
+    {
+System.Console.Write($"{array[i]} ");
+    }
+    System.Console.WriteLine();
 }
 
-return result;
-}
-
-void PrintArray(int[] arr)
-{
-int i = 0;
-Console.Write("[");
-while (i < arr.Length)
-{
-Console.Write(arr[i]);
-i++;
-if (i < arr.Length)
-{
- Console.Write(", ");
-}
-}
-Console.Write("]");
-}
-
-PrintArray(GetArray());
+PrintArray(arr);
