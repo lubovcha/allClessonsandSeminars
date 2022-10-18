@@ -31,18 +31,18 @@ int FindSizeArray(String[] array)
 
 string[] NewArray(string[] array, int sizeNewArray) 
 {
-    string[] sortedArray = new string[sizeNewArray];
+    string[] newArray = new string[sizeNewArray];
     int sizeElement = 3;
     int j = 0;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i].Length <= sizeElement)
         {
-            sortedArray[j] = array[i];
+            newArray[j] = array[i];
             j++;
         }
     }
-    return sortedArray;
+    return newArray;
 }
 
 void PrintArray(string[] array) 
@@ -64,8 +64,8 @@ System.Console.WriteLine();
 System.Console.WriteLine("Ваш массив:");
 PrintArray(createdArray);
 int sizeSortedArray = FindSizeArray(createdArray);
-string[] sortedArray = NewArray(createdArray, sizeSortedArray);
+string[] newArray = NewArray(createdArray, sizeSortedArray);
 System.Console.WriteLine();
 System.Console.WriteLine("Итоговый массив:");
-PrintArray(sortedArray);
+PrintArray(newArray);
 
