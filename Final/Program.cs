@@ -60,10 +60,10 @@ int size = Initial("Задайте размер первоначального �
 string[] array = new string[size];
 System.Console.WriteLine($"Внесите данные массива, вводя {size} значений, каждое с новой строчки: ");
 string[] createdArray = CreateArray(array);
-System.Console.WriteLine("Ваш массив:");
+System.Console.WriteLine("Первоначальный массив:");
 PrintArray(createdArray);
-int sizeSortedArray = FindSizeArray(createdArray);
-string[] newArray = NewArray(createdArray, sizeSortedArray);
+int sizeNewArray = FindSizeArray(createdArray);
+string[] newArray = NewArray(createdArray, sizeNewArray);
 System.Console.WriteLine("Итоговый массив:");
 PrintArray(newArray);
 
