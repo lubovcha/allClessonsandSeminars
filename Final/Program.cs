@@ -68,3 +68,4 @@ string[] sortedArray = GetSortArray(createdArray, sizeSortedArray);
 System.Console.WriteLine();
 System.Console.WriteLine("Итоговый массив:");
 PrintArray(sortedArray);
+
