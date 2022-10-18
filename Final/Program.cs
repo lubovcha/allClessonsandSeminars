@@ -1,21 +1,21 @@
-﻿int Initial(string message) //получаем данные массива
+﻿int Initial(string message) 
 {
     System.Console.Write(message);
     int result = Convert.ToInt32(Console.ReadLine());
     return result;
 }
 
-string[] FillArray(string[] array) //формируем массив
+string[] CreateArray(string[] array) 
 {
-    string[] filledArray = array;
-    for (int i = 0; i < filledArray.Length; i++)
+    string[] createdArray = array;
+    for (int i = 0; i < createdArray.Length; i++)
     {
-        filledArray[i] = Convert.ToString(Console.ReadLine());
+        createdArray[i] = Convert.ToString(Console.ReadLine());
     }
-    return filledArray;
+    return createdArray;
 }
 
-int FindSizeArray(String[] array) //проверяем введенный массив
+int FindSizeArray(String[] array) 
 {
     int sizeElement = 3;
     int count = 0;
@@ -29,7 +29,7 @@ int FindSizeArray(String[] array) //проверяем введенный мас
     return count;
 }
 
-string[] GetSortArray(string[] array, int sizeSortArray) //присваеваем индексы
+string[] GetSortArray(string[] array, int sizeSortArray) 
 {
     string[] sortedArray = new string[sizeSortArray];
     int sizeElement = 3;
@@ -45,7 +45,7 @@ string[] GetSortArray(string[] array, int sizeSortArray) //присваевае�
     return sortedArray;
 }
 
-void PrintArray(string[] array) // добавляем []
+void PrintArray(string[] array) 
 {
     Console.Write("[");
     for (int i = 0; i < array.Length-1; i++)
@@ -59,12 +59,12 @@ void PrintArray(string[] array) // добавляем []
 int size = Initial("Задайте размер первоначального массива, введя цифру: ");
 string[] array = new string[size];
 System.Console.WriteLine($"Внесите данные массива, вводя {size} значений, каждое с новой строчки: ");
-string[] filledArray = FillArray(array);
+string[] createdArray = CreateArray(array);
 System.Console.WriteLine();
 System.Console.WriteLine("Ваш массив:");
-PrintArray(filledArray);
-int sizeSortedArray = FindSizeArray(filledArray);
-string[] sortedArray = GetSortArray(filledArray, sizeSortedArray);
+PrintArray(createdArray);
+int sizeSortedArray = FindSizeArray(createdArray);
+string[] sortedArray = GetSortArray(createdArray, sizeSortedArray);
 System.Console.WriteLine();
 System.Console.WriteLine("Итоговый массив:");
 PrintArray(sortedArray);
